@@ -1,0 +1,43 @@
+programa
+{
+	inclua biblioteca Matematica -->mat
+	
+	funcao inicio()
+	{
+		inteiro resposta
+		escreva("Bem vindo, esse programa te ajudara a saber o consumo de KM/L e a distancia máxima que o seu véiculo pode fazer.\nPara saber a distancia máxima digite 1 e para saber a média digite 2\n")
+		leia(resposta)
+		se (resposta == 1)
+		{     
+			real kml, tanque                                
+			escreva("porfavor informe os km/l ? ")
+			leia(kml)
+			escreva("agora informe, quantos litros o tanque do seu véiculo tem ? ")
+			leia(tanque)
+			escreva ("com o tanque de combustível cheio seu véiculo percorre a distancia máxima de ",kml*tanque,"KM")
+			retorne
+		}
+			se (resposta == 2)
+			{
+				real bombalitro, hodometro, kml, tanque, kmt
+				escreva("então a partir de agora vamos fazer os sequintes passo\n1º zere o hodômetro parcial do painel\n2º no próximo abastecimento, confira a quantidade de combustível que abasteceu no tanque, através da bomba do posto.")
+				escreva("\ncom essas informações vamos primeiro calcular a média de KM/L seu véiculo\ninforme, qual a quantidade de litro que você abasteceu ? ")
+				leia (bombalitro)
+				escreva("agora informe, qual foi a quantidade de km rodados ? ")
+				leia(hodometro)
+				kml =  hodometro/bombalitro
+				escreva("o seu véiculo faz ",mat.arredondar(kml,2),"KM/L")
+				escreva("agora vamos saber a distancia máxima que o seu véiculo pode percorrer, quantos litros o tanque do seu véiculo tem ? ")
+				leia(tanque)
+				kmt = kml*tanque
+				escreva ("com o tanque de combustível cheio seu véiculo percorre a distancia máxima de ",mat.arredondar(kmt,2),"KM")
+				retorne
+			}
+				senao
+				{
+					escreva("escreva uma opção válida")
+					retorne
+					
+				}
+	}
+}
