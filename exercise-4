@@ -1,0 +1,37 @@
+programa
+{
+	inclua biblioteca Matematica
+ --> mat
+	
+	funcao inicio()
+	{
+		cadeia nome
+		inteiro j, i = 0
+		real media, nota, vetor[50], soma = 0.0
+
+		escreva("calculando a nota média da turma\nlembre-se para parar apenas digite um número negativo Ex: -1, -2...\n")
+		faca
+		{
+			escreva("Informe o ", i+1, "º valor: ")
+			leia(nota)
+			se(nota >= 0)
+			{
+				vetor[i] = nota
+				i++
+			}
+		}
+		
+		enquanto(nota>=0)
+
+		para(j=0; j < 30; j++)
+		{
+			soma += vetor[j]			
+		}
+
+		media = soma/i
+		escreva(media)
+		limpa()
+		escreva("a média da turma é de ", mat.arredondar(media,1), " pontos.")	
+			 	
+	}
+}
