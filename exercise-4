@@ -23,7 +23,7 @@ programa
 		
 		enquanto(nota>=0)
 
-		para(j=0; j < 30; j++)
+		para(j=0; j < 50; j++)
 		{
 			soma += vetor[j]			
 		}
